@@ -1,0 +1,20 @@
+Neural Networks :
+A neural network is a computational model that consists of layers of interconnected nodes or neurons. Deep Learning involves training Neural Networks.
+
+Types of Neural Networks :
+	1. Convolutional Neural Networks -> Good for image Recognition
+	2. Long short-term neural network -> good for speech recognition
+	3. Recurrent Neural Networks ->  For sequence models like NLP
+  4. Feed-Forward Neural Networks -> Very Basic. Used for classification, regression
+  
+Ways In which Neural Networks Learn :
+1. Supervised learning - Training sets consist of input features as well as labels.
+2. Unsupervised Learning -  have feature inputs but no output labels
+3. Reinforcement Learning - Learning system (agent) interacts with the world and learns to maximize a scalar reward signal.
+
+Reason for rise of Deep Learning : Scale 
+If we have a small training dataset, then relative efficiency between performances of various models/networks is not clearly defined but with larger datasets, the performace increases with the size of the model. 
+
+Basics of Logistic Regression :
+What is Logistic Regression : Logistic regression is a statistical and machine learning method used for binary classification problems, where the goal is to predict the probability of one of two possible outcomes.
+The logistic function maps any real-valued number into the range [0, 1], making it suitable for modeling probabilities.
