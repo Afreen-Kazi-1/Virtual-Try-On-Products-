@@ -73,8 +73,4 @@ what is batch normalization and advantages, how it works
 
 ## softmax classfier
 softmax regression
-how softmax works
-
-
-
-
+how softmax works.
