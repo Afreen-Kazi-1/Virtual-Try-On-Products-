@@ -1,4 +1,5 @@
-#Computer Vision
+# Computer Vision
+
 Computer vision is a field of artificial intelligence that enables computers and systems to derive meaningful information from digital images, videos, and other visual inputs. It involves developing techniques and algorithms to allow machines to interpret and understand the visual world. 
 
 ## Edge detection
