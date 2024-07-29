@@ -16,9 +16,29 @@
 	       = g( W[l+2] a[l+1] + b[l+2] + a[l] )`
       - Dimensions of z[l+2] and a[l] have to be the same
   - Inception
+      - Consists of concatenated blocks of inception module
+      - Name was taken from inception movie
 
 ---
 
 # Network in network
   - 1x1 convolution
   - Shrink number of channels. Also called feature transformation
+
+---
+
+# Transfer learning
+  - Saves time
+	- Use pretrained models rather than training your own
+  - Boosts the performance of network
+
+---
+
+# Data Augmentation
+  - Used to increase performance of neural network
+  - Some techniques include:
+    - Mirroring
+    - Cropping
+    - Rotating
+    
+ 	  
