@@ -10,3 +10,21 @@ The Inception network, also known as GoogLeNet, is a deep convolutional neural n
  Problem : Computational Cost (can be reduced using 1x1 conv nets
 
 We can also use open Source from github from Deep Learning guys
+
+## Transfer Learning : 
+here we use other models as initialisation for your model. 
+very valuable if other models have very large data and our model has comparatively smaller data
+It freezes some of the layers of the available model and retrains the rest for the current model. So it uses pretrained weights to save time
+
+## data Augmentation
+Increases the data set to improve efficiency
+Uses methods like :
+- Random Cropping
+- Mirror
+- colour Shifting
+
+## State of Computer Vision
+To do well on benchmarks : 
+- ensemble : Train several netwroks independently and avearge their outputs
+- Multicrop at test time : Run Classifier on multiple versions of test images
+- use opensource and implementations
