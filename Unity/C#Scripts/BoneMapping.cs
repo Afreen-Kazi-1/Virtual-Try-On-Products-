@@ -61,37 +61,38 @@ public void UpdateBonePositions(Vector3[] keypoints)
     if (keypoints == null || keypoints.Length < 15) // Ensure you have at least 15 keypoints
         return;
 
+
     // Update hips
     if (hips != null)
     {
-        hips.position = (keypoints[11] + keypoints[12]) / 2; // Average of left and right hips
-        Vector3 hipsDirection = keypoints[12] - keypoints[11]; // Direction between hips
+        hips.position = (keypoints[23] + keypoints[24]) / 2; // Average of left and right hips
+        Vector3 hipsDirection = keypoints[24] - keypoints[23]; // Direction between hips
         hips.rotation = Quaternion.LookRotation(hipsDirection);
     }
 
     // Update spine
-    if (spine != null && spine1 != null && spine2 != null)
-    {
-        spine.position = keypoints[0]; // Spine Base
-        spine1.position = keypoints[1]; // Spine Mid
-        spine2.position = keypoints[2]; // Spine Top
+    // if (spine != null && spine1 != null && spine2 != null)
+    // {
+    //     spine.position = keypoints[0]; // Spine Base
+    //     spine1.position = keypoints[1]; // Spine Mid
+    //     spine2.position = keypoints[2]; // Spine Top
 
-        Vector3 spineDirection = keypoints[1] - keypoints[0];
-        Vector3 spine1Direction = keypoints[2] - keypoints[1];
+    //     Vector3 spineDirection = keypoints[1] - keypoints[0];
+    //     Vector3 spine1Direction = keypoints[2] - keypoints[1];
 
-        spine.rotation = Quaternion.LookRotation(spineDirection);
-        spine1.rotation = Quaternion.LookRotation(spine1Direction);
-    }
+    //     spine.rotation = Quaternion.LookRotation(spineDirection);
+    //     spine1.rotation = Quaternion.LookRotation(spine1Direction);
+    // }
 
     // Update left arm
     if (leftShoulder != null && leftArm != null && leftForeArm != null)
     {
-        leftShoulder.position = keypoints[5]; // Left Shoulder
-        leftArm.position = keypoints[6];      // Left Elbow
-        leftForeArm.position = keypoints[7];  // Left Wrist
+        leftShoulder.position = keypoints[11]; // Left Shoulder
+        leftArm.position = keypoints[13];      // Left Elbow
+        leftForeArm.position = keypoints[15];  // Left Wrist
 
-        Vector3 leftArmDirection = keypoints[6] - keypoints[5]; // Shoulder to Elbow
-        Vector3 leftForeArmDirection = keypoints[7] - keypoints[6]; // Elbow to Wrist
+        Vector3 leftArmDirection = keypoints[13] - keypoints[11]; // Shoulder to Elbow
+        Vector3 leftForeArmDirection = keypoints[15] - keypoints[13]; // Elbow to Wrist
 
         leftShoulder.rotation = Quaternion.LookRotation(leftArmDirection);
         leftArm.rotation = Quaternion.LookRotation(leftForeArmDirection);
@@ -100,12 +101,12 @@ public void UpdateBonePositions(Vector3[] keypoints)
     // Update right arm
     if (rightShoulder != null && rightArm != null && rightForeArm != null)
     {
-        rightShoulder.position = keypoints[2]; // Right Shoulder
-        rightArm.position = keypoints[3];      // Right Elbow
-        rightForeArm.position = keypoints[4];  // Right Wrist
+        rightShoulder.position = keypoints[12]; // Right Shoulder
+        rightArm.position = keypoints[14];      // Right Elbow
+        rightForeArm.position = keypoints[16];  // Right Wrist
 
-        Vector3 rightArmDirection = keypoints[3] - keypoints[2]; // Shoulder to Elbow
-        Vector3 rightForeArmDirection = keypoints[4] - keypoints[3]; // Elbow to Wrist
+        Vector3 rightArmDirection = keypoints[14] - keypoints[12]; // Shoulder to Elbow
+        Vector3 rightForeArmDirection = keypoints[16] - keypoints[14]; // Elbow to Wrist
 
         rightShoulder.rotation = Quaternion.LookRotation(rightArmDirection);
         rightArm.rotation = Quaternion.LookRotation(rightForeArmDirection);
@@ -114,12 +115,12 @@ public void UpdateBonePositions(Vector3[] keypoints)
     // Update left leg
     if (leftUpLeg != null && leftLeg != null && leftFoot != null)
     {
-        leftUpLeg.position = keypoints[11]; // Left Hip
-        leftLeg.position = keypoints[13];   // Left Knee
-        leftFoot.position = keypoints[15];  // Left Ankle
+        leftUpLeg.position = keypoints[23]; // Left Hip
+        leftLeg.position = keypoints[25];   // Left Knee
+        leftFoot.position = keypoints[27];  // Left Ankle
 
-        Vector3 leftLegDirection = keypoints[13] - keypoints[11]; // Hip to Knee
-        Vector3 leftFootDirection = keypoints[15] - keypoints[13]; // Knee to Ankle
+        Vector3 leftLegDirection = keypoints[25] - keypoints[23]; // Hip to Knee
+        Vector3 leftFootDirection = keypoints[27] - keypoints[25]; // Knee to Ankle
 
         leftUpLeg.rotation = Quaternion.LookRotation(leftLegDirection);
         leftLeg.rotation = Quaternion.LookRotation(leftFootDirection);
@@ -128,28 +129,28 @@ public void UpdateBonePositions(Vector3[] keypoints)
     // Update right leg
     if (rightUpLeg != null && rightLeg != null && rightFoot != null)
     {
-        rightUpLeg.position = keypoints[12]; // Right Hip
-        rightLeg.position = keypoints[14];   // Right Knee
-        rightFoot.position = keypoints[16];  // Right Ankle
+        rightUpLeg.position = keypoints[24]; // Right Hip
+        rightLeg.position = keypoints[26];   // Right Knee
+        rightFoot.position = keypoints[28];  // Right Ankle
 
-        Vector3 rightLegDirection = keypoints[14] - keypoints[12]; // Hip to Knee
-        Vector3 rightFootDirection = keypoints[16] - keypoints[14]; // Knee to Ankle
+        Vector3 rightLegDirection = keypoints[26] - keypoints[24]; // Hip to Knee
+        Vector3 rightFootDirection = keypoints[28] - keypoints[26]; // Knee to Ankle
 
         rightUpLeg.rotation = Quaternion.LookRotation(rightLegDirection);
         rightLeg.rotation = Quaternion.LookRotation(rightFootDirection);
     }
 
     // Update left toe
-    if (leftToeBase != null)
-    {
-        leftToeBase.position = keypoints[17]; // Left Toe
-    }
+    // if (leftToeBase != null)
+    // {
+    //     leftToeBase.position = keypoints[17]; // Left Toe
+    // }
 
-    // Update right toe
-    if (rightToeBase != null)
-    {
-        rightToeBase.position = keypoints[18]; // Right Toe
-    }
+    // // Update right toe
+    // if (rightToeBase != null)
+    // {
+    //     rightToeBase.position = keypoints[18]; // Right Toe
+    // }
 }
 
 
