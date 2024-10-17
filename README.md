@@ -115,6 +115,6 @@ After the simulation is created, this video is then sent to a python script whic
 
 ## Acknowledgements and Resources
 
-[DigiHuman](https://github.com/Danial-Kord/DigiHuman)
+* [DigiHuman](https://github.com/Danial-Kord/DigiHuman)
 
-[ACGPN paper](https://arxiv.org/pdf/2003.05863)
+* [ACGPN paper](https://arxiv.org/pdf/2003.05863)
