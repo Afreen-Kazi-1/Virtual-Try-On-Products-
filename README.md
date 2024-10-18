@@ -79,7 +79,20 @@ After the simulation is created, this video is then sent to a python script whic
 
 
 ## File Structure
-
+📦Virtual-Try-On-Products 
+ ┣ 📂assets                            # Contains gifs, objs and images of the results 
+ ┣ 📂2D                                # Approaches and scripts for 2D TryOn
+ ┃ ┣ ACGPN                               # Used to create and save masks of objects from input image
+ ┃ ┣ End-to-End                          # Run this notebook to get results
+ ┣ 📂3D
+ ┃ ┣ 3D Pose Estimation                # Used to estimate pose and keypoints
+ ┃ ┣ Unity                             # Scripts for integrating mediapipe to Unity and pose update scripts
+ ┃ ┣ DigiHuman                         # Scripts for rigging and pose update in Unity. 
+ ┃ ┣ Superimposition                   # Blend simulated mesh with reference video. 
+ ┣ 📜README.md
+ ┣ 📜demo_video.gif                    # Demo Video
+ ┣ 📜project_report.docx               # Project Report
+ ┗ 📜requirements.txt                  # Requirements
 
 ## Installations and Execution
 
