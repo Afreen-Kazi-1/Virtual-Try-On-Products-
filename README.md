@@ -79,7 +79,7 @@ After the simulation is created, this video is then sent to a python script whic
 
 
 ## File Structure
-'''
+```
  📦Virtual-Try-On-Products 
  ┣ 📂assets                            # Contains gifs, objs and images of the results 
  ┣ 📂2D                                # Approaches and scripts for 2D TryOn
@@ -94,7 +94,7 @@ After the simulation is created, this video is then sent to a python script whic
  ┣ 📜demo_video.gif                    # Demo Video
  ┣ 📜project_report.docx               # Project Report
  ┗ 📜requirements.txt                  # Requirements 
- '''
+ ```
 
 ## Installations and Execution
 
