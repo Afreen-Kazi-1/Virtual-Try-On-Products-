@@ -5,24 +5,24 @@
 The project takes a video of the user as input and attempts at creating a realistic cloth try on video as the output by the methods of pose estimation, mesh movements in unity, bone mapping and superimposition to process the final output.
 
 ### Input Video: 
-![]()
+![](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/main/assets/input.gif?raw=true)
 
 
 ### Output:
-![]()
+![](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/main/assets/output.gif?raw=true)
 
 
 
 ## Table of Contents
-* [About the Project](https://github.com/Mr-MVP/Virtual-Try-On-Products-/tree/Final#about-the-project)
-* [Process Flow](https://github.com/Mr-MVP/Virtual-Try-On-Products-/tree/Final#process-flow)
-* [Applications](https://github.com/Mr-MVP/Virtual-Try-On-Products-n/blob/Final/README.md#applications)
-* [File Structure](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/Final/README.md#file-structure)
-* [Installations and Execution](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/Final/README.md#installations-and-execution)
-* [Tech Stack](https://github.com/Mr-MVP/Virtual-Try-On-Products-/tree/Final#tech-stack)
-* [Future Prospects](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/Final/README.md#future-prospects)
-* [Contributors](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/Final/README.md#contributors)
-* [Acknowledgements and Resources](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/Final/README.md#acknowledgements-and-resources)
+* [About the Project](https://github.com/Mr-MVP/Virtual-Try-On-Products-/tree/main#about-the-project)
+* [Process Flow](https://github.com/Mr-MVP/Virtual-Try-On-Products-/tree/main#process-flow)
+* [Applications](https://github.com/Mr-MVP/Virtual-Try-On-Products-n/blob/main/README.md#applications)
+* [File Structure](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/main/README.md#file-structure)
+* [Installations and Execution](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/main/README.md#installations-and-execution)
+* [Tech Stack](https://github.com/Mr-MVP/Virtual-Try-On-Products-/tree/main#tech-stack)
+* [Future Prospects](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/main/README.md#future-prospects)
+* [Contributors](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/main/README.md#contributors)
+* [Acknowledgements and Resources](https://github.com/Mr-MVP/Virtual-Try-On-Products-/blob/main/README.md#acknowledgements-and-resources)
 
 
 ## About the Project:
@@ -32,12 +32,6 @@ Our approach consists of first performing Pose estimation of the given video. Th
 We create pose simulation of the cloth using the keypoints received from Mediapipe. This simulation runs on a rigged mesh i.e a mesh skinned to the skeleton and each joint having its weight painted. 
 
 After the simulation is created, this video is then sent to a python script which uses OpenCV functions for superimposition. The script considers the keypoints of the human body while superimposition. The shoulder and hips coordinates are considered.
-
-
-### Process Flow
-
-![]()
-![]()
 
 
 1. **Input**: The input will be a video of the user. The video file should be in .mp4 file format. 
@@ -65,7 +59,7 @@ After the simulation is created, this video is then sent to a python script whic
    
 5. **Superimposition of videos**: We use the functions offered by the OpenCV in order to superimpose the input video and simulation video.
    
-   ![]()
+![]()
    
 
 
@@ -97,6 +91,36 @@ After the simulation is created, this video is then sent to a python script whic
  ```
 
 ## Installations and Execution
+
+Cloning DigiHuman 
+
+```git clone https://github.com/Danial-Kord/DigiHuman.git```
+
+Add your input video in DigiHuman
+
+Save the simulation video generated
+
+Cloning into device 
+
+```git clone https://github.com/Mr-MVP/Virtual-Try-On-Products-.git```
+
+```cd Virtual-Try-On-Products-```
+
+**Create a virtual env for the project**
+
+```pip install requirements.txt```
+
+Create a new folder for saving your input/output videos
+
+```cd 3D```
+
+Add your videos as input in ``superimpose.py``
+
+Run the script
+
+```python superimpose.py```
+
+The output will be saved as a .mp4 file
 
 
 
